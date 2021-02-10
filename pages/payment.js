@@ -1,11 +1,11 @@
 import React from "react";
 import {Container, Spinner} from "react-bootstrap";
-import PaymentInputs from "./PaymentInputs";
+import PaymentInputs from "../component/PaymentInputs";
 import * as actionCreater from "../store/actions/orderActions";
 import {connect} from "react-redux";
-import {withRouter} from "react-router-dom";
-import _withFormWrapper from "./FormWrapper";
-import StepProgress from "./StepProgress";
+import {withRouter} from "next/router";
+import _withFormWrapper from "../component/FormWrapper";
+import StepProgress from "../component/StepProgress";
 
 class Payment extends React.Component {
     state = {
@@ -38,7 +38,7 @@ class Payment extends React.Component {
             ...this.state,
             orderId: this.props.order.id,
         };
-        this.props.orderPayment(paymentInfo, this.props.history);
+        this.props.orderPayment(paymentInfo, this.props.router);
     };
 
     componentDidMount() {

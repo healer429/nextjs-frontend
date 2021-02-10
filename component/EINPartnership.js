@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {Col, Container, Form, Button} from 'react-bootstrap';
 import * as actionCreater from "../store/actions/productActions";
 import InputMask from 'react-input-mask';
-import {withRouter} from "react-router-dom";
+import { withRouter } from "next/router";
 import GeneralQuestions from "./GeneralQuestions";
 import Dates from "./Dates";
 import Communication from "./Communication";
@@ -99,7 +99,7 @@ class EINPartnership extends Component {
                     customerName: product.customerName,
                     code: product.code,
                 };
-                this.props.orderEINPartnershipStandardProduct(productInfo, this.props.history);
+                this.props.orderEINPartnershipStandardProduct(productInfo, this.props.router);
             }
             this.setState({validated: true});
         };

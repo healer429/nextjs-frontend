@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Col, Container, Form, Button} from 'react-bootstrap';
 import * as actionCreater from "../store/actions/productActions";
-import {withRouter} from "react-router-dom";
+import { withRouter } from "next/router";
 import GeneralQuestions from "./GeneralQuestions";
 import Dates from "./Dates";
 import Communication from "./Communication";
@@ -99,7 +99,7 @@ class EINChurch extends Component {
                     customerName: product.customerName,
                     code: product.code
                 };
-                this.props.orderEINChurchStandardProduct(productInfo, this.props.history);
+                this.props.orderEINChurchStandardProduct(productInfo, this.props.router);
             }
             this.setState({validated: true});
         };

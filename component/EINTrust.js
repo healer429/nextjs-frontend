@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Col, Container, Form, Button} from 'react-bootstrap';
 import * as actionCreater from "../store/actions/productActions";
-import {withRouter} from "react-router-dom";
+import { withRouter } from "next/router";
 import Dates from "./Dates";
 import Communication from "./Communication";
 import CorporateAddress from "./CorporateAddress";
@@ -92,7 +92,7 @@ class EINTrust extends Component {
                     customerName: product.customerName,
                     code: product.code
                 };
-                this.props.orderEINTrustStandardProduct(productInfo, this.props.history);
+                this.props.orderEINTrustStandardProduct(productInfo, this.props.router);
             }
             this.setState({validated: true});
         };

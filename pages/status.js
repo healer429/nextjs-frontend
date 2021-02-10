@@ -3,6 +3,7 @@ import { Button, Container, Form, Spinner } from "react-bootstrap";
 import * as actionCreater from "../store/actions/orderActions";
 import { connect } from "react-redux";
 import OrderStatusResult from "../component/OrderStatusResult";
+import { withRouter } from "next/router";
 
 class OrderStatus extends Component {
   state = {
@@ -22,7 +23,7 @@ class OrderStatus extends Component {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
       e.preventDefault();
-      this.props.orderCheck(this.state.orderNumber, this.props.history);
+      this.props.orderCheck(this.state.orderNumber, this.props.router);
     }
     this.setState({ validated: true });
   };
@@ -111,4 +112,4 @@ const mapStateToProps = (state) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(OrderStatus);
+)(withRouter(OrderStatus));

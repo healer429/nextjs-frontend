@@ -4,8 +4,7 @@ import { Button, Form } from "react-bootstrap";
 import Fieldset from "./Fieldset";
 import Address from "./Address";
 import CustomLabel from "./CustomLabel";
-import card from "../img/Credit-Card-Visa-And-Master-Card.png";
-import "../css/payment.css";
+import card from "../public/img/Credit-Card-Visa-And-Master-Card.png";
 import axios from "axios";
 
 export default function PaymentInputs(props) {

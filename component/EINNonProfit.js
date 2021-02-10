@@ -84,7 +84,7 @@ class EINNonProfit extends Component {
 
     render() {
         const {products} = this.props.products;
-        const product = products.filter(u => u.code.replace("_", "").includes(this.props.location.pathname.substring(10)))[0];
+        const product = products.filter(u => u.code.replace("_", "").includes(this.props.router.pathname.substring(10)))[0];
         const handleSubmit = e => {
             const form = e.currentTarget;
             if (form.checkValidity() === false) {

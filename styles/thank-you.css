@@ -1,0 +1,33 @@
+/* Thank you Styles */
+.thank-you {
+  text-align: center;
+  padding-top: 10px;
+}
+.thank-you h2 {
+  font-size: 50px;
+  color: #000000;
+  font-family: SSPBold;
+  text-transform: uppercase;
+  margin: 38px 0 0px 0;
+  line-height: 52px;
+}
+.thank-you h3 {
+  font-size: 30px;
+  color: #000000;
+  font-family: SSPBold;
+  margin-top: 0px;
+}
+.thank-you p {
+  font-size: 16px;
+  color: #434343;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.thank-you ul li, .thank-you ol li {
+  font-size: 16px;
+  font-weight: normal;
+  color: #434343;
+  text-align: justify;
+  margin-bottom: 0px;
+  font-family: SSPReg;
+}

@@ -1,0 +1,459 @@
+/* Home page styles */
+.home {
+  text-align: left;
+  padding-top: 10px;
+}
+.home .content h1 {
+  font-size: 54px;
+  color: #000000;
+  font-family: SSPBold;
+  text-transform: uppercase;
+  line-height: 82px;
+  text-align: center;
+  width: 70%;
+  margin: initial !important;
+  margin-bottom: 30px !important;
+  line-height: 66px;
+  margin: 0 auto !important;
+}
+
+.home p {
+  font-size: 18px;
+  color: #434343;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.products {
+  margin-top: 50px;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+.product {
+  text-align: center;
+}
+.round-icon {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background-color: #e4eefb;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding-top: 15px;
+}
+.round-icon.estate img {
+  position: relative;
+  top: -3px;
+  left: 4px;
+}
+.round-icon.church img {
+  position: relative;
+  top: -4px;
+  left: 0px;
+}
+.round-icon.personalservice img {
+  position: relative;
+  top: 5px;
+  left: 1px;
+}
+.round-icon.scorp img {
+  position: relative;
+  top: -4px;
+  left: 1px;
+}
+.round-icon.nonprofit img {
+  position: relative;
+  top: 2px;
+  left: -1px;
+}
+
+.products a {
+  display: inline-block;
+  border-right: 1px solid #c9caca;
+  border-bottom: 1px solid #c9caca;
+
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  text-align: left;
+  text-decoration: none !important;
+  width: 221px;
+  height: 221px;
+  vertical-align: top;
+  text-transform: uppercase;
+  padding: 40px 20px 0 20px;
+}
+.products a span {
+  font-size: 18px;
+  color: #101661;
+  font-weight: 600;
+}
+.products a:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 3px 9px 44px 5px rgba(16, 71, 97, 0.2);
+  box-shadow: 3px 9px 44px 5px rgba(16, 71, 97, 0.2);
+}
+.products a:nth-child(1),
+.products a:nth-child(6) {
+  border-left: 1px solid #c9caca;
+}
+.products a:nth-child(1),
+.products a:nth-child(2),
+.products a:nth-child(3),
+.products a:nth-child(4),
+.products a:nth-child(5) {
+  border-top: 1px solid #c9caca;
+}
+
+.home .text-under-products {
+  text-align: center;
+  font-size: 20px;
+  color: #434343;
+  width: 100%;
+  margin-top: 35px;
+}
+
+.blue-line {
+  background-color: #101661;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0 16px 0;
+}
+.blue-line h4 {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: SSPBold;
+  text-transform: uppercase;
+}
+
+.content {
+  max-width: 100%;
+}
+.home .content {
+  max-width: 1110px !important;
+  padding-top: 0px;
+}
+
+.home .left-pan {
+  display: inline-block;
+  width: 59%;
+  padding-top: 40px;
+  vertical-align: top;
+}
+.home .left-pan h6 {
+  color: #000000;
+  font-size: 60px;
+  font-family: SSPSemiBold;
+  margin-bottom: 40px;
+}
+.home .left-pan ul {
+  padding-left: 0px;
+}
+.home .left-pan ul li,
+.home .left-pan ul li p {
+  color: #434343;
+  font-size: 22px;
+  font-family: SSPReg;
+  list-style: none;
+  margin-bottom: 18px;
+  vertical-align: middle;
+}
+.home .left-pan ul li p {
+  display: inline-block;
+}
+.home .left-pan ul li div {
+  display: inline-block;
+  background-color: #d0e2fa;
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  vertical-align: middle;
+  margin-right: 18px;
+}
+.home .left-pan ul li div span {
+  background-color: #1a74e6;
+  width: 36px;
+  height: 36px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  top: 9px;
+  left: 1px;
+  color: #fff;
+}
+.home .right-pan {
+  width: 100%;
+  max-width: 447px;
+  padding: 35px 30px 10px 53px;
+  display: inline-block;
+  margin-top: 40px;
+
+  -webkit-box-shadow: 3px 9px 44px 5px rgba(16, 71, 97, 0.1);
+  box-shadow: 3px 9px 44px 5px rgba(16, 71, 97, 0.1);
+}
+.home .right-pan h6 {
+  color: #101661;
+  font-size: 24px;
+  font-family: SSPSemiBold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.home .right-pan .icon-wrapper {
+  background-color: #d1e3fa;
+  width: 96px;
+  height: 96px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+  margin-bottom: 0px;
+}
+.home .right-pan div {
+  margin-bottom: 30px;
+}
+.home .right-pan .icon-wrapper img {
+  position: relative;
+  left: -17px;
+  top: -6px;
+}
+
+.application-process {
+  text-align: center;
+  margin-top: 30px;
+}
+.application-process p {
+  width: 100%;
+  font-size: 20px;
+}
+.application-process .step {
+  width: 27%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 8%;
+}
+.application-process .step:first-child {
+  margin-left: 0;
+}
+.application-process .step p {
+  font-size: 16px;
+}
+.application-process .step h6 {
+  color: #101661;
+  font-size: 20px;
+  font-family: SSPSemiBold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.application-process .step div {
+  display: inline-block;
+  background-color: #d0e2fa;
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  vertical-align: middle;
+}
+.application-process .step div span {
+  background-color: #1a74e6;
+  width: 36px;
+  height: 36px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  top: 9px;
+  left: 1px;
+  color: #fff;
+}
+.application-process .step div span img {
+  position: relative;
+  top: 4px;
+  left: 1px;
+}
+.application-process .steps-wrapper {
+  margin-top: 80px;
+}
+
+.home .content.faq {
+  margin-top: 30px;
+  padding-bottom: 30px !important;
+}
+.content.faq hr {
+  color: #ccc;
+}
+.faq .collapse p,
+.faq p {
+  width: auto;
+}
+.faq p a.faq-link:link,
+.faq p a.faq-link:visited {
+  width: auto;
+  color: #101661;
+  font-size: 20px;
+  font-family: SSPSemiBold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.faq p a.faq-link::after {
+  content: "\2014";
+  color: #a3a3a3;
+  font-size: 26px;
+  float: right;
+  margin-top: -4px;
+}
+.faq p a.faq-link:not(.collapsed)::after {
+  content: "\0002B" !important;
+  color: #1a74e6;
+  font-size: 26px;
+  float: right;
+}
+.faq p a.faq-link:not(.collapsed) {
+  color: #1a74e6;
+}
+
+.home h3 {
+  color: #000000;
+  font-family: SSPSemiBold;
+  font-size: 40px;
+  text-align: center;
+}
+.home.about .content {
+  padding-bottom: 10px;
+}
+
+.products .popular:after {
+  position: absolute;
+  text-align: left;
+  top: 0;
+  left: 0;
+  display: block;
+  padding: 3px 14px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: red;
+  content: "POPULAR";
+  width: auto;
+}
+
+/* Mobile view */
+@media (max-width: 1280px) {
+  .content {
+    padding: 15px 0px 70px 0px !important;
+  }
+  .home .content {
+    padding: 0px 20px 70px 20px !important;
+  }
+}
+/*iPad Pro*/
+@media (max-width: 1024px) and (min-width: 769px) {
+  .products a:nth-child(5) {
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 1px solid #c9caca;
+  }
+  .products a:nth-child(9) {
+    border-left: 1px solid #c9caca;
+  }
+  .home .left-pan {
+    width: 53%;
+  }
+}
+/*iPad*/
+@media (max-width: 768px) and (min-width: 415px) {
+  .products a:nth-child(4),
+  .products a:nth-child(7),
+  .products a:nth-child(10) {
+    border-left: 1px solid #c9caca;
+  }
+  .products a:nth-child(4),
+  .products a:nth-child(5) {
+    border-top: 0px;
+  }
+  .home .left-pan {
+    width: 40%;
+  }
+  .home .left-pan h6 {
+    font-size: 30px;
+  }
+  .home .left-pan ul li div {
+    margin-right: 3px;
+  }
+  .home .right-pan {
+    max-width: 434px;
+  }
+}
+@media (max-width: 414px) {
+  .home .content h1 {
+    font-size: 26px;
+    line-height: 36px;
+    width: auto;
+  }
+  .home .content hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .home p {
+    width: auto;
+  }
+  .products {
+    margin-top: 20px;
+  }
+  .products a {
+    border-left: 1px solid #c9caca;
+    display: block;
+    width: auto;
+  }
+  .products a:nth-child(8) {
+    /* Personal Service Corporation EIN */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .home .left-pan {
+    width: auto;
+  }
+  .home .left-pan ul li p {
+    width: 74%;
+  }
+  .home .right-pan {
+    text-align: center;
+  }
+  .application-process .step {
+    width: auto;
+    display: block;
+    margin-left: 0px;
+  }
+  .home .left-pan h6 {
+    font-size: 38px;
+  }
+  .faq p a.faq-link:link,
+  .faq p a.faq-link:visited {
+    font-size: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .home .content h1 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .home p {
+    font-size: 14px;
+  }
+}

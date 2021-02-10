@@ -1,65 +1,42 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Header from "../component/Header";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <>
+      <Header />
+      <div className="content-wrapper">
+        <div className="content">
+          <div className="home">
+            <div className="content">
+              <h1>Apply for Your Employer Identification Number (EIN)</h1>
+              <hr />
+              <p>
+                An Employer Identification Numbers (EIN) or Tax Identification
+                Number (Tax ID, or TIN) is required for those who want to form a
+                business, create a Trust or an Estate in the United States.
+              </p>
+              <p>
+                Select your entity and fill out the online Tax ID application to
+                obtain an EIN number in 2 Hours to 3 business days depending on
+                the delivery option you choose.
+              </p>
+              <p className="text-under-products">
+                Learn more about legal entities if you are not sure which type
+                of legal structure you should choose
+              </p>
+            </div>
+            <div className="blue-line">
+              <h4>Start the EIN Filing Process</h4>
+            </div>
+            <div className="blue-line">
+              <h4>EIN Application Process Explained</h4>
+            </div>
+            <div className="blue-line">
+              <h4>Frequently Asked Questions About EINs</h4>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      </div>
+    </>
+  );
 }

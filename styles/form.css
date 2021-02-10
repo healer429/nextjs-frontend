@@ -1,0 +1,402 @@
+/* Form */
+.Form {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.Form h1 {
+  text-transform: uppercase;
+  font-family: SSPBold;
+  font-size: 1.2vw;
+  color: #000000;
+  margin-top: 0px;
+}
+.Form h2 {
+  font-size: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  color: #555;
+}
+.Form h3 {
+  font-size: 25px;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  color: #555;
+}
+.Form h5 {
+  font-family: SSPBold;
+  font-size: 20px;
+  color: #434343;
+  margin-top: 0px;
+  text-align: left;
+  padding: 20px;
+}
+.Form label {
+  color: #434343;
+  font-size: 16px;
+  position: relative;
+  top: 16px;
+}
+.Form input[type="text"],
+.Form input[type="phone"],
+.Form input[type="email"],
+.Form input[type="tel"],
+.Form textarea,
+.Form select {
+  color: #434343;
+  font-size: 16px;
+  height: 56px;
+  padding: 15px;
+  width: auto;
+  min-width: 515px;
+  border: solid 2px #c7c8ca;
+  border-radius: 2px;
+  float: right;
+}
+.Form button[type="submit"] {
+  padding: 15px 20px;
+  background: #1a74e6;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: SSPBold;
+  text-transform: uppercase;
+}
+.Form hr {
+  border-top: 1px dashed #9a9a9a;
+  margin: 30px 0 30px 0;
+}
+
+.form-row,
+.form-group {
+  text-align: left;
+  padding: 0 20px 0 20px;
+  display: flow-root;
+}
+
+.Form .radio label {
+  width: 40%;
+  display: inline-block;
+  top: 0px;
+}
+.Form .radio .col {
+  width: 50%;
+  display: inline;
+  vertical-align: top;
+}
+
+.Form .message {
+  font-family: SSPReg;
+  font-size: 15px;
+  color: #000000;
+  margin-top: 0px;
+  text-align: left;
+  background-color: #f2f2f2;
+  padding: 25px 15px 20px 15px;
+}
+
+.Form .border-check .form-check {
+  position: relative;
+  display: block;
+  padding-left: 2.25rem !important;
+  padding: 15px 10px 10px 20px;
+  border: 1px #c7c8ca solid;
+  margin-bottom: 5px;
+}
+.Form .border-check .form-check-label {
+  font-family: SSPSemiBold;
+  font-size: 14px;
+  color: #434343;
+  top: 0px;
+  width: 100%;
+}
+
+.Form.payment .form-group {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.inline-check-wrapper .col {
+  display: inline;
+}
+.inline-check-wrapper .form-label,
+.form-check.form-check-inline label {
+  top: 0px;
+}
+.Form .left-check label {
+  top: 0px;
+}
+
+.Form .dates select {
+  color: #434343;
+  font-size: 18px;
+  height: 60px;
+  padding: 15px;
+  width: auto;
+  min-width: 245px;
+  border: solid 2px #c7c8ca;
+  border-radius: 2px;
+}
+.Form #closingMonth {
+  min-width: 52%;
+}
+.Form .dates .form-row {
+  display: flex;
+}
+
+label[for="legalName"] {
+  width: 28%;
+  top: 5px;
+}
+
+label[for="organizedState"],
+label[for="dbaname"],
+label[for="previousLast"],
+label[for="numberOfAgricultureEmployees"],
+label[for="numberOfHouseholdeEmployees"],
+label[for="numberOfOtherEmployees"],
+label[for="previousEINNumberFirst2"],
+label[for="previousEINNumberLast7"] {
+  width: 30%;
+  top: 3px;
+}
+.Form.non-profit label[for="dbaname"] {
+  top: 16px;
+}
+
+.Form.payment .custom-label p:nth-child(2) {
+  font-family: SSPReg;
+}
+.Form.payment .border-check input[type="radio"]:not(:checked) ~ label {
+  color: #cccccc;
+}
+.Form.payment .custom-label p {
+  font-family: SSPBold;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.Form.payment .custom-label .price {
+  position: absolute;
+  top: 10px;
+  right: 2%;
+}
+.Form.payment hr {
+  margin: 10px 0 10px 0;
+}
+.Form.payment h5 {
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
+.Form.products {
+  max-width: 100%;
+}
+.Form.products h1 {
+  text-align: center;
+}
+
+.Form.contact .radio label {
+  width: 33%;
+}
+.Form textarea.form-control {
+  height: 175px;
+}
+
+.Form.payment #cardNumber {
+  min-width: 245px;
+  margin-right: 0%;
+  float: right;
+}
+.Form.payment #cardsImg {
+  float: right;
+  margin-left: 16px;
+  margin-top: 5px;
+}
+.question {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAYFBMVEVHcEwBdtwARMwAZswAXNYAbNUAeuAAM5kAjfYSpv8Aie9Otv8AhOp+xv83qPtauv8AYsgXl/YDlvwprv8cqP8AgOYAUMqTzP8RiOgYceH///+s1/8GqP8PgeIcpv83sP8++YT4AAAAAXRSTlMAQObYZgAAAIdJREFUeF5ti0cOAzEMxCzJtWyv6f//ZeRZ5BYCcyCBMUCAAdAH+CXpSokx5uk45PL358aKPc9OEOYb3xW2rxZkmGZ1biMa5F/I0THckmuh1Bzj5eSKht7Xmlndkxt7BL9tlttBRIMJC5FvF/UlGA2rflsQkVWDlpTGnXkfU1JHCU8Q4CAAyBfEVgiy+BC8BAAAAABJRU5ErkJggg==) 50% no-repeat;
+  content: "";
+}
+label[for="cardNumber"] {
+  float: left;
+}
+
+.inline-check-wrapper.billing-address .form-label {
+  margin-right: 11%;
+}
+
+/* Mobile view */
+@media (max-width: 1024px) {
+  .Form input[type="text"],
+  .Form input[type="phone"],
+  .Form input[type="email"],
+  .Form textarea,
+  .Form select {
+    min-width: 200px;
+    width: 100%;
+  }
+  .Form label {
+    top: 0px;
+  }
+  .Form .radio label {
+    width: 60%;
+  }
+  .Form h1 {
+    font-size: 22px;
+    margin-right: 0px;
+  }
+  .Form.contact .radio label {
+    width: 50%;
+  }
+  label[for="legalName"],
+  label[for="organizedState"],
+  label[for="dbaname"] {
+    width: auto;
+  }
+}
+
+/*iPad Pro*/
+@media (max-width: 1024px) and (min-width: 769px) {
+  .Form .dates select {
+    min-width: 225px;
+  }
+  .products a span {
+    font-size: 20px;
+  }
+  label[for="cardNumber"] {
+    margin-right: 21%;
+  }
+  .Form.payment #lastName,
+  .Form.payment #firstName {
+    width: auto;
+    min-width: 515px;
+  }
+  .inline-check-wrapper.billing-address .form-label {
+    margin-right: 5%;
+  }
+}
+/*iPad*/
+@media (max-width: 768px) and (min-width: 415px) {
+  .Form h2 {
+    font-size: 30px;
+  }
+  .Form h3 {
+    font-size: 18px;
+  }
+  .Form .dates select {
+    min-width: 187px;
+  }
+  .products a span {
+    font-size: 16px;
+  }
+  label[for="cardNumber"] {
+    margin-right: 7%;
+  }
+  .Form.payment #lastName,
+  .Form.payment #firstName {
+    width: auto;
+    min-width: 515px;
+  }
+  .inline-check-wrapper.billing-address .form-label {
+    margin-right: 5%;
+  }
+}
+@media (max-width: 414px) {
+  .Form h2 {
+    font-size: 20px;
+  }
+  .Form h3 {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+  .Form label {
+    top: 0px;
+  }
+  .Form input[type="text"],
+  .Form input[type="phone"],
+  .Form input[type="email"],
+  .Form select {
+    float: none;
+  }
+  .form-row,
+  .form-group {
+    padding: 0 0px 0 0px;
+  }
+  .Form #closingMonth,
+  .Form #organizedState {
+    min-width: 100%;
+  }
+  .Form .dates select {
+    min-width: 100%;
+  }
+  .Form hr {
+    margin: 10px 0 10px 0;
+  }
+  .Form .radio label {
+    width: 100%;
+  }
+  .Form {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .Form.payment #cardNumber {
+    margin-right: 0%;
+    float: none;
+    min-width: 200px;
+    width: 100%;
+  }
+  .Form.payment input[type="tel"] {
+    min-width: 200px;
+    width: 100%;
+  }
+  .inline-check-wrapper.billing-address .form-label {
+    margin-right: 0%;
+    width: 54%;
+    vertical-align: top;
+  }
+}
+@media (max-width: 640px) and (min-width: 321px) {
+  .Form.payment #cardsImg {
+    margin-left: 0px;
+    max-width: 190px;
+    margin-top: -2px;
+    padding-bottom: 5px;
+  }
+  .Form.payment .custom-label p {
+    width: 80%;
+  }
+  .Form.payment .custom-label .price {
+    top: 0px;
+  }
+}
+@media (max-width: 320px) {
+  .inline-check-wrapper.billing-address .col {
+    padding: 0px;
+  }
+  .inline-check-wrapper.billing-address .form-label {
+    margin-right: 3%;
+  }
+  .Form.payment #cardsImg {
+    margin-left: 0px;
+    max-width: 145px;
+    margin-top: 0px;
+    padding-bottom: 5px;
+  }
+  .Form.payment .custom-label .price {
+    top: 0px;
+  }
+  .Form.payment .custom-label p {
+    width: 80%;
+  }
+}

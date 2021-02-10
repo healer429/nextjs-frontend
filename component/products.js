@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { getProducts } from "../store/actions/productActions";
 import { Container, OverlayTrigger, Tooltip } from "react-bootstrap";
 import ProductIcon from "./ProductIcon";
-import { Link } from "react-router-dom";
 
 class products extends Component {
   componentDidMount() {
@@ -57,8 +56,8 @@ class products extends Component {
                 </Tooltip>
               }
             >
-              <Link
-                to={"/products/" + u.code.replace("_", "")}
+              <a
+                href={"/products/" + u.code.replace("_", "")}
                 className={
                   u.code.replace("_", "") === "EINSoleProp" ||
                   u.code.replace("_", "") === "EINLLC"
@@ -70,7 +69,7 @@ class products extends Component {
                   <ProductIcon code={u.code.replace("_", "")} />
                   <span>{u.customerName}</span>
                 </div>
-              </Link>
+              </a>
             </OverlayTrigger>
           </React.Fragment>
         ))}

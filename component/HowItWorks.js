@@ -1,8 +1,8 @@
 import React from "react";
 
-import formabusiness from "../img/form-a-business.png";
-import createatrust from "../img/create-a-trust.png";
-import addnewemployees from "../img/add-new-employees.png";
+import formabusiness from "../public/img/form-a-business.png";
+import createatrust from "../public/img/create-a-trust.png";
+import addnewemployees from "../public/img/add-new-employees.png";
 
 function HowItWorks() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import whitecheck from "../img/white-check.png";
+import whitecheck from "../public/img/white-check.png";
 
 function ApplicationProcess() {
   return (

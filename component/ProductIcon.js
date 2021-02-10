@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-import sole from "../img/sole.png";
-import church from "../img/church.png";
-import corp from "../img/corp.png";
-import estate from "../img/estate.png";
-import nonprofit from "../img/nonprofit.png";
-import partherships from "../img/partherships.png";
-import personalservice from "../img/personal-service.png";
-import scorp from "../img/s-corp.png";
-import trust from "../img/trust.png";
-import llc from "../img/llc.png";
+import sole from "../public/img/sole.png";
+import church from "../public/img/church.png";
+import corp from "../public/img/corp.png";
+import estate from "../public/img/estate.png";
+import nonprofit from "../public/img/nonprofit.png";
+import partherships from "../public/img/partherships.png";
+import personalservice from "../public/img/personal-service.png";
+import scorp from "../public/img/s-corp.png";
+import trust from "../public/img/trust.png";
+import llc from "../public/img/llc.png";
 
 class ProductIcon extends Component {
   render() {

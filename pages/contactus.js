@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import {Button, Container, Form} from "react-bootstrap";
 import {withRouter} from "react-router-dom";
 import InputMask from "react-input-mask";
-import Names from "./Names";
-import Fieldset from "./Fieldset";
+import Names from "../component/Names";
+import Fieldset from "../component/Fieldset";
 import axios from "axios";
 class ContactUs extends Component {
     state = {
@@ -178,4 +178,4 @@ class ContactUs extends Component {
     }
 }
 
-export default withRouter(ContactUs);
+export default ContactUs;

@@ -4,8 +4,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ```bash
 npm run build
+npm start
 # or
 yarn build
+yarn start
 ```
 
 ## Getting Started

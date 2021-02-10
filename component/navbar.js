@@ -1,26 +1,17 @@
 import React, { Component } from "react";
 import Logo from "./Logo";
-import Link from 'next/link'
+import Link from "next/link";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
-class Navbar extends Component {
+class Navbarr extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-md navbar-dark">
-        <div className="navbar-brand">
+      <Navbar collapseOnSelect expand="md" variant="dark">
+        <Navbar.Brand href="#home">
           <Logo />
-        </div>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarContent"
-          aria-controls="navbarContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarContent">
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
@@ -68,10 +59,10 @@ class Navbar extends Component {
               </Link>
             </li>
           </ul>
-        </div>
-      </nav>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 }
 
-export default Navbar;
+export default Navbarr;

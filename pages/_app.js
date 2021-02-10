@@ -8,9 +8,17 @@ import "../styles/index.css";
 import "../styles/App.css";
 import "../styles/form.css";
 import "../styles/home.css";
+import "../styles/pricing.css";
 import "../styles/navbar.css";
 
 import TagManager from 'react-gtm-module'
+
+// const tagManagerArgs = {
+//   gtmId: 'GTM-K5QFP8T',
+//   preview: '/'
+// }
+
+// TagManager.initialize(tagManagerArgs);
 
 function MyApp({ Component, pageProps }) {
   return (

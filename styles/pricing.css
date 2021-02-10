@@ -96,10 +96,10 @@
 }
 
 .box-offer .copy ul li {
-  list-style-image: url(../img/pricing-blue-check.png);
+  list-style-image: url(/img/pricing-blue-check.png);
 }
 .box-offer.selected .copy ul li {
-  list-style-image: url(../img/pricing-white-check.png);
+  list-style-image: url(/img/pricing-white-check.png);
 }
 
 .home.about.pricing p {

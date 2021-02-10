@@ -1,6 +1,5 @@
 import React from "react";
 import FAQ from "./FAQ";
-import "../css/pricing.css";
 import PricingOffer from "./PricingOffer";
 import axios from "axios";
 

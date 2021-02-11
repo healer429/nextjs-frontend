@@ -1,18 +1,18 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Col, Container, Form, Button} from 'react-bootstrap';
-import * as actionCreater from "../store/actions/productActions";
+import * as actionCreater from "../../store/actions/productActions";
 import InputMask from 'react-input-mask';
 import { withRouter } from "next/router";
-import GeneralQuestions from "./GeneralQuestions";
-import Dates from "./Dates";
-import Communication from "./Communication";
-import ActivityInputs from "./ActivityInputs";
-import CorporateAddress from "./CorporateAddress";
-import _withFormWrapper from "./FormWrapper";
-import Names from "./Names";
-import StepProgress from "./StepProgress";
-import SSN from "./SSN";
+import GeneralQuestions from "../../component/GeneralQuestions";
+import Dates from "../../component/Dates";
+import Communication from "../../component/Communication";
+import ActivityInputs from "../../component/ActivityInputs";
+import CorporateAddress from "../../component/CorporateAddress";
+import _withFormWrapper from "../../component/FormWrapper";
+import Names from "../../component/Names";
+import StepProgress from "../../component/StepProgress";
+import SSN from "../../component/SSN";
 
 class EINNonProfit extends Component {
     state = {

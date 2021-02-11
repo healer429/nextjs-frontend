@@ -1,50 +1,40 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Col, Container, Form, Button} from 'react-bootstrap';
-import * as actionCreater from "../store/actions/productActions";
+import * as actionCreater from "../../store/actions/productActions";
 import { withRouter } from "next/router";
-import Dates from "./Dates";
-import Communication from "./Communication";
-import CorporateAddress from "./CorporateAddress";
-import _withFormWrapper from "./FormWrapper";
-import GeneralQuestions from "./GeneralQuestions";
-import Names from "./Names";
-import StepProgress from "./StepProgress";
-import SSN from "./SSN";
+import GeneralQuestions from "../../component/GeneralQuestions";
+import Dates from "../../component/Dates";
+import Communication from "../../component/Communication";
+import {RegionDropdown} from "react-country-region-selector";
+import ActivityInputs from "../../component/ActivityInputs";
+import CorporateAddress from "../../component/CorporateAddress";
+import _withFormWrapper from "../../component/FormWrapper";
+import Names from "../../component/Names";
+import StepProgress from "../../component/StepProgress";
+import SSN from "../../component/SSN";
 
-class EINTrust extends Component {
+class EINSCorp extends Component {
     state = {
-        dbaname: null,
+        organizedState: "",
         legalName: null,
-        trustType: null,
-        createrFirstName: null,
-        createrMiddleName: null,
-        createrLastName: null,
-        createrSSN: null,
-        createrSuffixName: null,
-        trusteeFirstName: null,
-        trusteeMiddleName: null,
-        trusteeLastName: null,
-        trusteeTitle: null,
-        trusteeAddressAddress1: null,
-        trusteeAddressAddress2: null,
-        trusteeAddressCity: null,
-        trusteeAddressState: "",
-        trusteeAddressCountry: "US",
-        trusteeAddressZip: null,
-        trusteeAddressCounty: null,
-        altAddress: "false",
-        altAddressAddress1: null,
-        altAddressAddress2: null,
-        altAddressCity: null,
-        altAddressState: "",
-        altAddressCountry: "US",
-        altAddressZip: null,
-        altAddressCounty: null,
-        customerPhone: null,
-        customerEmail: null,
-        questionsAppliedBefore: 'false',
-        questionsHire: 'false',
+        dbaname: null,
+        principalOfficerFirstName: null,
+        principalOfficerMiddleName: null,
+        principalOfficerLastName: null,
+        principalOfficerSSN: null,
+        principalOfficerSuffixName: null,
+        principalOfficerTitle: null,
+        activityReasonForApplying: null,
+        activityPrimaryActivity: null,
+        activitySpecificProducts: null,
+        activityProductDescription : null,
+        questionsAppliedBefore: "false",
+        questionsHire: "false",
+        questionsExcise: "false",
+        questionsATF: "false",
+        questionsGambling: "false",
+        questionsHighway: "false",
         payLessThan4k: "false",
         annualTaxes: "false",
         previousEINNumberFirst2: null,
@@ -55,6 +45,23 @@ class EINTrust extends Component {
         firstDateWagesMonth: "1",
         firstDateWagesDay: "1",
         firstDateWagesYear: "1996",
+        corpAddressAddress1: null,
+        corpAddressAddress2: null,
+        corpAddressCity: null,
+        corpAddressState: "",
+        corpAddressCountry: "US",
+        corpAddressZip: null,
+        corpAddressCounty: null,
+        altAddress: "false",
+        altAddressAddress1: null,
+        altAddressAddress2: null,
+        altAddressCity: null,
+        altAddressState: "",
+        altAddressCountry: "US",
+        altAddressZip: null,
+        altAddressCounty: null,
+        customerPhone: null,
+        customerEmail: null,
         closingMonth: "12",
         startDateYear: new Date().getFullYear(),
         startDateDay: new Date().getDate(),
@@ -90,63 +97,48 @@ class EINTrust extends Component {
                 const productInfo = {
                     ...this.state,
                     customerName: product.customerName,
-                    code: product.code
+                    code: product.code,
                 };
-                this.props.orderEINTrustStandardProduct(productInfo, this.props.router);
+                this.props.orderEINSCorpStandardProduct(productInfo, this.props.router);
             }
             this.setState({validated: true});
         };
-
         if (!product) {
             return <Container fluid>Loading</Container>
         }
-        return (
+        return (           
             <Container fluid className="Form">
                 <StepProgress step={0} />
                 <h2>Step 1: Complete Our Simplified Form</h2>
-                <h3>2021 Trusts Tax ID / SS-4 Form</h3>
+                <h3>2021 S-Corporations Tax ID / SS-4 Form</h3>
                 <Col sm={12}>
                     <Form noValidate validated={this.state.validated} onSubmit={handleSubmit}>
                         <h5>Legal information</h5>
                         <Form.Group controlId="legalName">
-                            <Form.Label>Trust name</Form.Label>
+                            <Form.Label>Legal Name of the S-Corporation</Form.Label>
                             <Form.Control type="text" required placeholder="Name" onChange={this.handleChange}/>
                             <Form.Control.Feedback type="invalid">
-                                Please provide a valid trust name
+                                Please provide a valid corporation name
                             </Form.Control.Feedback>
                         </Form.Group>
-                        <Form.Group controlId="trustType">
-                            <Form.Label>Type of Trust</Form.Label>
-                            <Form.Control as="select" onChange={this.handleChange} required>
-                                <option value="">Select type of Trust</option>
-                                <option value="BankruptcyEstate">Bankruptcy Estate (Individual)</option>
-                                <option value="CharitableLeadAnnuityTrust">Charitable Lead Annuity Trust</option>
-                                <option value="CharitableLeadUnitTrust">Charitable Lead Unitrust</option>
-                                <option value="CharitableRemainderAnnuityTrust">Charitable Remainder Annuity Trust
-                                </option>
-                                <option value="CharitableRemainderUnitrust">Charitable Remainder Unitrust</option>
-                                <option value="Conservatorship">Conservatorship</option>
-                                <option value="Custodianship">Custodianship</option>
-                                <option value="Escrow">Escrow</option>
-                                <option value="FNMA">FNMA (Fannie Mae)</option>
-                                <option value="GNMA">GNMA (Ginnie Mae)</option>
-                                <option value="Guardianship">Guardianship</option>
-                                <option value="IrrevocableTrust">Irrevocable Trust</option>
-                                <option value="PooledIncomeFund">Pooled Income Fund</option>
-                                <option value="QualifiedFuneralTrust">Qualified Funeral Trust</option>
-                                <option value="Receivership">Receivership</option>
-                                <option value="RevocableTrust">Revocable Trust</option>
-                                <option value="SettlementFund">Settlement Fund</option>
-                                <option value="Trust">Trust (All Others)</option>
-                            </Form.Control>
+                        <Form.Group controlId="dbaname">
+                            <Form.Label>DBA (Doing Business As) of the S-Corporation</Form.Label>
+                            <Form.Control type="text" placeholder="Optional" onChange={this.handleChange}/>
+                        </Form.Group>
+                        <Form.Group controlId="organizedState">
+                            <Form.Label>State Organized</Form.Label>
+                            <RegionDropdown required className="form-control" id="organizedState" name="organizedState"
+                                            country="US" countryValueType="short"
+                                            value={this.state.organizedState} valueType="short"
+                                            onChange={(val, e) => this.handleChange(e)}/>
                             <Form.Control.Feedback type="invalid">
-                                Please provide a valid trust type
+                                Please provide the state where the company was organized
                             </Form.Control.Feedback>
                         </Form.Group>
                         <hr/>
-                        <h5>Creator/Grantor Information</h5>
-                        <Names id="creater" onChange={this.handleChange}/>
-                        <Form.Group controlId="createrSuffixName">
+                        <h5>Principal Officer Information</h5>
+                        <Names id="principalOfficer" onChange={this.handleChange}/>
+                        <Form.Group controlId="principalOfficerSuffixName">
                             <Form.Label>Suffix Name (optional)</Form.Label>
                             <Form.Control as="select" onChange={this.handleChange}>
                                 <option value="">Please Select</option>
@@ -163,33 +155,34 @@ class EINTrust extends Component {
                                 <option value="VI">VI</option>
                             </Form.Control>
                         </Form.Group>
-                        <SSN id="creater" state={this.state}
-                             onChange={this.handleChange} />
-                        <hr/>
-                        <h5>Trustee Information</h5>
-                        <Names id="trustee" onChange={this.handleChange}/>
-                        <Form.Group controlId="trusteeTitle">
+                        <Form.Group controlId="principalOfficerTitle">
                             <Form.Label>Title</Form.Label>
                             <Form.Control required as="select" onChange={this.handleChange}>
                                 <option value="">Please Select</option>
-                                <option value="trustee">Trustee</option>
-                                <option value="co-trustee">Co-trustee</option>
-                                <option value="successor trustee">Successor Trustee</option>
+                                <option value="ceo">CEO</option>
                                 <option value="executor">Executor</option>
+                                <option value="owner">Owner</option>
+                                <option value="managing member">Managing Member</option>
+                                <option value="managing member/owner">Managing Member/Owner</option>
+                                <option value="president">President</option>
                                 <option value="other">Other</option>
                             </Form.Control>
                             <Form.Control.Feedback type="invalid">
                                 Please select a valid title
                             </Form.Control.Feedback>
                         </Form.Group>
+                        <SSN id="principalOfficer" state={this.state}
+                             onChange={this.handleChange} />
                         <hr/>
-                        <GeneralQuestions onChange={this.handleChange} state={this.state} only2={true} applyBeforeLabel="Has this trust ever received or applied for an EIN before?"/>
+                        <ActivityInputs onChange={this.handleChange} />
                         <hr/>
-                        <CorporateAddress id="trusteeAddress" header="Trustee Address (PO Boxes are not authorized)"
+                        <GeneralQuestions onChange={this.handleChange} state={this.state} applyBeforeLabel="Has this S-Corp ever received or applied for an EIN before?"/>
+                        <hr/>
+                        <CorporateAddress header="Corporate Address (PO Boxes are not authorized)" id="corpAddress"
                                  state={this.state}
                                  onChange={this.handleChange}/>
                         <hr/>
-                        <Dates id="startDate" label="Date the Trust was started or acquired"
+                        <Dates id="startDate" label="Date entity was started or acquired"
                                month={this.state.startDateMonth}
                                day={this.state.startDateDay}
                                year={this.state.startDateYear} closingMonth={this.state.closingMonth}
@@ -202,15 +195,15 @@ class EINTrust extends Component {
                         </Button>
                     </Form>
                 </Col>
-            </Container>
+            </Container>           
         )
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        orderEINTrustStandardProduct: (productInfo, history) => {
-            dispatch(actionCreater.trustEinOrder(productInfo, history));
+        orderEINSCorpStandardProduct: (productInfo, history) => {
+            dispatch(actionCreater.sCorpEinOrder(productInfo, history));
         },
         getProducts: () => {
             dispatch(actionCreater.getProducts());
@@ -220,4 +213,4 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = (state) => ({products: state.products})
 
-export default _withFormWrapper(connect(mapStateToProps, mapDispatchToProps)(withRouter(EINTrust)))
+export default _withFormWrapper(connect(mapStateToProps, mapDispatchToProps)(withRouter(EINSCorp)))

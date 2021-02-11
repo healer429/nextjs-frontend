@@ -11,7 +11,6 @@ import "../styles/home.css";
 import "../styles/pricing.css";
 import "../styles/navbar.css";
 import "../styles/terms.css";
-import "../styles/terms.css";
 import "../styles/form.css";
 import "../styles/payment.css";
 import "../styles/bootstrap.min.css";

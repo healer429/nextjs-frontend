@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Col, Container, Form, Button} from 'react-bootstrap';
-import * as actionCreater from "../store/actions/productActions";
+import * as actionCreater from "../../store/actions/productActions";
 import { withRouter } from "next/router";
-import Communication from "./Communication";
-import Dates from "./Dates";
-import CorporateAddress from "./CorporateAddress";
-import _withFormWrapper from "./FormWrapper";
-import Names from "./Names";
-import StepProgress from "./StepProgress";
-import SSN from "./SSN";
+import Communication from "../../component/Communication";
+import Dates from "../../component/Dates";
+import CorporateAddress from "../../component/CorporateAddress";
+import _withFormWrapper from "../../component/FormWrapper";
+import Names from "../../component/Names";
+import StepProgress from "../../component/StepProgress";
+import SSN from "../../component/SSN";
 
 class EINEstate extends Component {
     state = {

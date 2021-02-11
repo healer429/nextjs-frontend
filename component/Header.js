@@ -1,7 +1,9 @@
 import React from "react";
 import Navbarr from "./Navbar";
+import { withRouter } from "next/router";
 
-const Header = () => {
+const Header = (props) => {
+  console.log(props.router.search)
   return (
     <div className="header-wrapper">
       <div className="header">
@@ -11,4 +13,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

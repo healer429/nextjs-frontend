@@ -14,15 +14,15 @@ import "../styles/terms.css";
 import "../styles/form.css";
 import "../styles/payment.css";
 import "../styles/bootstrap.min.css";
-
 import TagManager from "react-gtm-module";
 
-// const tagManagerArgs = {
-//   gtmId: 'GTM-K5QFP8T',
-//   preview: '/'
-// }
+const tagManagerArgs = {
+  gtmId: 'GTM-K5QFP8T',
+}
 
-// TagManager.initialize(tagManagerArgs);
+if (process.browser) {
+  TagManager.initialize(tagManagerArgs);
+}
 
 function MyApp({ Component, pageProps }) {
   return (

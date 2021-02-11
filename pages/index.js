@@ -1,4 +1,4 @@
-import Products from "../component/products";
+import Products from "../component/Products";
 import HowItWorks from "../component/HowItWorks";
 import ApplicationProcess from "../component/ApplicationProcess";
 import FAQ from "../component/FAQ";

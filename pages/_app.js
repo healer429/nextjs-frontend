@@ -4,7 +4,6 @@ import Header from "../component/Header";
 import Footer from "../component/Footer";
 import { Provider } from "react-redux";
 import store from "../store/store";
-import "../styles/bootstrap.min.css";
 import "../styles/index.css";
 import "../styles/App.css";
 import "../styles/form.css";
@@ -15,6 +14,7 @@ import "../styles/terms.css";
 import "../styles/terms.css";
 import "../styles/form.css";
 import "../styles/payment.css";
+import "../styles/bootstrap.min.css";
 
 import TagManager from "react-gtm-module";
 

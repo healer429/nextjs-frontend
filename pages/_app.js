@@ -13,7 +13,7 @@ import "../styles/navbar.css";
 import "../styles/terms.css";
 import "../styles/form.css";
 import "../styles/payment.css";
-import "../styles/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.css'
 import TagManager from "react-gtm-module";
 
 const tagManagerArgs = {

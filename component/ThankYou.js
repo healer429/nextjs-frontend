@@ -8,7 +8,6 @@ import StepProgress from "./StepProgress";
 
 class ThankYou extends React.Component {
   render() {
-//    console.log(this.props);
     if (!this.props.order) return <div style={{
       display: "flex",
       alignItems: "center",

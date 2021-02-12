@@ -300,7 +300,6 @@ export const orderCreate = (order, history) => {
     if (localStorage.getItem("keyword")) {
         order.order ? order.order.keyword = localStorage.getItem("keyword") : order.order = {keyword:localStorage.getItem("keyword")}
     }
-    console.log(order);
     return dispatch => {
         dispatch(orderStarted());
         return axios
@@ -315,7 +314,6 @@ export const orderCreate = (order, history) => {
                 history.push('/payment');
             })
             .catch(error => {
-                console.log(error.response);
                 if (
                     error.response &&
                     error.response.data

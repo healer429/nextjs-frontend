@@ -32,7 +32,6 @@ class ContactUs extends Component {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
       e.preventDefault();
-      console.log(this.state);
       const contactus = {
         name:
           this.state.customerFirstName +

@@ -16,7 +16,6 @@ export const address = (orderInfo, addressId) => {
 export const orderPayment = (paymentInfo, history) => {
     return dispatch => {
         dispatch(paymentStarted());
-        console.log(paymentInfo.billingAddress);
         let date = paymentInfo.expiryDate.replace(/\s/g, '').split("/");
         const paymentData = {
             firstName: paymentInfo.firstName,
@@ -57,7 +56,6 @@ export const orderPayment = (paymentInfo, history) => {
                 }
             })
             .catch(error => {
-                console.log(error.response);
                 if (
                     error.response &&
                     error.response.data
@@ -92,7 +90,6 @@ export const clearOrder = () => ({
 export const checkOrder = (orderId, history) => {
     return dispatch => {
         dispatch(checkOrderStarted());
-        console.log(orderId);
         return axios
             .get(process.env.REACT_APP_API + "/orders/ein-status/" + orderId, {
                 headers: {
@@ -100,8 +97,6 @@ export const checkOrder = (orderId, history) => {
                 }
             })
             .then(response => {
-                // send success action
-                console.log(response);
                 dispatch(checkOrderSuccess(response.data));
             })
             .catch(error => {

@@ -70,7 +70,7 @@ ol {
 }
 .content-wrapper::after {
   content: "";
-  background: url(/img/usa-flag-bg.jp2) top right no-repeat;
+  background: url(/img/usa-flag-bg.webp) top right no-repeat;
   opacity: 0.2;
   top: 0;
   left: 0;

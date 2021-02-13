@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
-    "start": "next start -p 3001"
+    "start": "next start -p 3001",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "next": "10.0.6",
     "next-images": "^1.7.0",
+    "next-on-netlify": "^2.8.7",
     "react": "17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-country-region-selector": "^3.0.2",

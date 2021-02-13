@@ -2,14 +2,17 @@
 @font-face {
   font-family: SSPReg;
   src: url("/fonts/SourceSansPro-Regular.woff") format("woff");
+  font-display: swap
 }
 @font-face {
   font-family: SSPSemiBold;
   src: url("/fonts/SourceSansPro-SemiBold.woff") format("woff");
+  font-display: swap
 }
 @font-face {
   font-family: SSPBold;
   src: url("/fonts/SourceSansPro-Bold.woff") format("woff");
+  font-display: swap
 }
 
 html,

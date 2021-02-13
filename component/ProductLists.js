@@ -4,7 +4,7 @@ import { getProducts } from "../store/actions/productActions";
 import { Container, OverlayTrigger, Tooltip } from "react-bootstrap";
 import ProductIcon from "./ProductIcon";
 
-class Products extends Component {
+class ProductLists extends Component {
   componentDidMount() {
     this.props.getProducts();
   }
@@ -80,4 +80,4 @@ class Products extends Component {
 
 const mapStateToProps = (state) => ({ products: state.products });
 
-export default connect(mapStateToProps, { getProducts })(Products);
+export default connect(mapStateToProps, { getProducts })(ProductLists);

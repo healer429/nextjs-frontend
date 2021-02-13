@@ -1,7 +1,7 @@
 import HowItWorks from "../component/HowItWorks";
 import ApplicationProcess from "../component/ApplicationProcess";
 import FAQ from "../component/FAQ";
-import Products from "../component/Products";
+import ProductLists from "../component/ProductLists";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
             obtain an EIN number in 2 Hours to 3 business days depending on the
             delivery option you choose.
           </p>
-          <Products />
+          <ProductLists />
           <p className="text-under-products">
             Learn more about legal entities if you are not sure which type of
             legal structure you should choose

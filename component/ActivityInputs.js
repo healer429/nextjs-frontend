@@ -499,8 +499,8 @@ export default function ActivityInputs(props) {
         return (
             activitySpecificProducts === "other" ? <div>
             <Form.Group controlId="activityProductDescription">
-                <Form.Label>Describe Products/Services</Form.Label>
-                <Form.Control type="text" placeholder="Describe Products/Services" onChange={props.onChange} required/>
+                <Form.Label>Describe ProductLists/Services</Form.Label>
+                <Form.Control type="text" placeholder="Describe ProductLists/Services" onChange={props.onChange} required/>
                 <Form.Control.Feedback type="invalid">
                     Please describe the products sold or services provided
                 </Form.Control.Feedback>
@@ -512,7 +512,7 @@ export default function ActivityInputs(props) {
         return (
             activityPrimaryActivitie.value === "" ? null : <div>
                 <Form.Group controlId="activitySpecificProducts">
-                    <Form.Label>Specific Products/Services</Form.Label>
+                    <Form.Label>Specific ProductLists/Services</Form.Label>
                     <Form.Control as="select" required onChange={handleSpecificProductsChange}>
                         {activityPrimaryActivitie.specificProducts.map(m => <option key={m.value}
                                                                                     value={m.value}>{m.name}</option>)}

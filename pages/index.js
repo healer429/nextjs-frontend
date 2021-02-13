@@ -1,7 +1,7 @@
-import Products from "../component/Products";
 import HowItWorks from "../component/HowItWorks";
 import ApplicationProcess from "../component/ApplicationProcess";
 import FAQ from "../component/FAQ";
+import Products from "../component/Products";
 
 export default function Home() {
   return (
